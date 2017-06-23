@@ -1,0 +1,7 @@
+.opensocial-portlet-admin .category-treeview .aui-tree-label {
+	cursor: pointer;
+
+	&:hover {
+		color: #06C;
+	}
+}

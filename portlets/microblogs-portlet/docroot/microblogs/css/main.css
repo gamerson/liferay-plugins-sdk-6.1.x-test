@@ -1,0 +1,277 @@
+@import "compass";
+
+$microblogs-border-color: #C7D0DA;
+
+.microblogs-portlet {
+	.taglib-header {
+		display: none;
+	}
+
+	.microblogs-container {
+		padding-bottom: 20px;
+	}
+
+	.microblogs-entry-form {
+		border-bottom: 1px solid $microblogs-border-color;
+		padding: 10px 11px;
+		position: relative;
+
+		.aui-field-text {
+			display: block;
+			padding: 0 5px;
+
+			textarea {
+				height: 1.25em;
+				margin: 0 -10px;
+				overflow: hidden;
+				width: 100%;
+			}
+		}
+
+		.aui-field-text-focused textarea {
+			height: auto;
+		}
+
+		.aui-button-holder {
+			margin: 5px 0 0;
+		}
+
+		.aui-field-select {
+			display: inline-block;
+			float: left;
+
+			.aui-field-element {
+				position: static;
+			}
+		}
+
+		.button-holder-right {
+			float: right;
+			line-height: 1em;
+		}
+
+		.microblogs-countdown {
+			background: #CFD8E1;
+			color: #FFF;
+			padding: 2px;
+			position: absolute;
+			right: 14px;
+			top: 14px;
+		}
+
+		.microblogs-countdown-warned {
+			background: #F00;
+		}
+
+		&.reply {
+			margin-left: 25px;
+			padding-left: 0;
+		}
+	}
+
+	.autocomplete {
+		background-color: #FFF;
+		height: 18px;
+		padding: 8px;
+		position: relative;
+	}
+
+	.microblogs-entry {
+		border-bottom: 1px solid $microblogs-border-color;
+		margin: 0 15px;
+		padding: 1em 0 0.5em;
+
+		.entry-bubble {
+			margin-left: 50px;
+		}
+	}
+
+	.thumbnail {
+		float: left;
+		height: 45px;
+		margin-right: 2px;
+		overflow: hidden;
+		width: 45px;
+
+		img {
+			max-width: 45px;
+		}
+	}
+
+	.comments-container {
+		display: none;
+	}
+
+	.microblogs-entry {
+		.user-name a {
+			font-weight: bold;
+		}
+
+		.footer {
+			color: #CCC;
+			font-size: 0.9em;
+
+			.action {
+				display: none;
+			}
+
+			.action-container a {
+				display: inline-block;
+				padding: 0 5px;
+				position: relative;
+			}
+		}
+
+		&:hover .footer .action {
+			display: inline-block;
+		}
+
+		.footer .action-container {
+			.comment, .repost {
+				display: inline-block;
+			}
+		}
+
+		&.show-comments {
+			.comment a:after {
+				border: 5px solid $microblogs-border-color;
+				border-color: transparent transparent $microblogs-border-color;
+				bottom: -8px;
+				content: "";
+				display: block;
+				left: 50%;
+				margin-left: -5px;
+				position: absolute;
+			}
+
+			.comments-container {
+				display: block;
+			}
+
+			.footer {
+				padding: 0 0 8px;
+			}
+		}
+	}
+
+	.reply {
+		margin-left: 50px;
+
+		.entry-bubble {
+			margin-left: 30px;
+		}
+
+		.thumbnail {
+			height: 26px;
+			width: 26px;
+
+			img {
+				max-width: 26px;
+			}
+		}
+
+		.microblogs-entry, .microblogs-entry-form {
+			border-bottom-width: 0;
+			border-top: 1px solid $microblogs-border-color;
+			margin: 0;
+		}
+
+		.content, .user-name {
+			display: inline;
+		}
+
+		.microblogs-entry-form .button-holder-right {
+			float: none;
+			margin-left: 35px;
+		}
+
+		.microblogs-entry-content, .autocomplete {
+			margin-left: 35px;
+		}
+
+		.microblogs-entry .footer {
+			padding: 0;
+		}
+	}
+
+	.microblogs-status-container .footer .action-container {
+		display: none;
+	}
+
+	.microblogs-entry-form:after, .microblogs-entry:after {
+		clear: both;
+		content: "";
+		display: block;
+	}
+
+	.highlighter-content {
+		color: transparent;
+		line-height: 1.5em;
+
+		@include force-wrap();
+
+		left: 1px;
+		padding: 5px;
+		position: absolute;
+		top: 1px;
+		width: 100%;
+		visibility: hidden;
+		z-index: 998;
+
+		&.textbox {
+			min-height: 20px;
+			padding: 2px;
+			position: static;
+		}
+
+		span {
+			background-color: #97D1FF;
+			font-weight: normal;
+			margin: -2px -2px 0;
+			padding: 2px 2px 0;
+			visibility: visible;
+			zoom: 1;
+		}
+
+		div {
+			display: inline-block;
+			width: 100%;
+
+			@include force-wrap();
+		}
+	}
+
+	.aui-field-input-text {
+		background: none transparent;
+		border-width: 0;
+		line-height: 1.5em;
+		min-width: 99%;
+		outline: none;
+		position: absolute;
+		resize: none;
+		top: 0;
+		z-index: 999;
+	}
+
+	.microblogs-autocomplete {
+		clear: both;
+		height: 50px;
+
+		.thumbnail {
+			margin: 0 5px 0 0;
+
+			img {
+				float:left;
+				width: 50px;
+			}
+		}
+
+		.small {
+			font-size: 10px;
+		}
+	}
+
+	.taglib-page-iterator {
+		padding: 5px 25px;
+	}
+}

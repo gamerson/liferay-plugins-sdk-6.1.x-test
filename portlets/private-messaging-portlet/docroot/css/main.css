@@ -1,0 +1,187 @@
+@import "compass";
+
+.private-messaging-portlet {
+	.aui-dialog-content .aui-panel-bd {
+		padding: 0;
+	}
+
+	.header-title {
+		font-weight: normal;
+		margin: 0;
+		padding: 10px;
+	}
+
+	img.avatar {
+		width: 50px;
+	}
+
+	.check-all {
+		margin: 0 20px 0 5px;
+	}
+
+	.controls {
+		background-color: #EEE;
+		border: 1px solid #CCC;
+		margin-bottom: -1px;
+		padding: 5px;
+		width: auto;
+
+		.controls-content {
+			line-height: 2em;
+		}
+
+		.aui-column-content {
+			padding: 0;
+		}
+
+		.col-1 {
+			text-align: left;
+		}
+
+		.col-2 {
+			text-align: right;
+		}
+
+		.back-button {
+			float: right;
+		}
+	}
+
+	.message-to input, .message-subject input {
+		width: 300px;
+	}
+
+	.message-body {
+		width: 90%;
+	}
+
+	.message-body-container .message-body-container-content {
+		padding: 10px;
+
+		.autocomplete-button {
+			margin: 0;
+		}
+	}
+
+	.author-sender {
+		font-weight: bold;
+	}
+
+	.message-link {
+		display: block;
+		margin: -10px -10px -10px -60px;
+		padding: 10px 10px 10px 60px;
+		position: relative;
+		z-index: 1;
+
+		.body {
+			color: #666;
+		}
+
+		.subject {
+			color: #333;
+		}
+	}
+
+	.private-messaging-container .results-header, .taglib-user-display.display-style-2 .user-details, .taglib-user-display.display-style-2 .user-name {
+		display: none;
+	}
+
+	/* Messages */
+
+	.unread {
+		font-weight: bold;
+
+		.body {
+			font-weight: normal;
+		}
+	}
+
+	.private-messaging-container .taglib-search-iterator .col-1 {
+		width: 10px;
+	}
+
+	/* Results */
+
+	.messages .results-grid {
+		border-width: 0;
+
+		table.taglib-search-iterator, .results-row td, .results-row.alt td {
+			border: 1px solid #CFCFCF;
+		}
+
+		.results-row td, .results-row.alt td {
+			background: #FFF;
+			padding: 10px;
+		}
+
+		.results-row.unread td {
+			background: #F0F5F7;
+		}
+	}
+
+	/* Thread */
+
+	.thread {
+		.body {
+			padding: 5px 60px 0 0;
+
+			.image-thumbnail {
+				float: left;
+				height: 150px;
+				margin: 10px;
+				width: 150px;
+
+				img {
+					max-height: 150px;
+					max-width: 150px;
+				}
+			}
+		}
+
+		.thread-info {
+			padding: 0 10px 10px;
+		}
+
+		.results-row td {
+			border-bottom: 1px solid #CFCFCF;
+			background-color: transparent;
+		}
+
+		.name {
+			font-weight: bold;
+		}
+	}
+
+	.date {
+		color: #777;
+		float: right;
+		font-size: 11px;
+	}
+
+	.messages .taglib-user-display, .thread .taglib-user-display {
+		float: left;
+		padding: 0;
+	}
+
+	.messages .last-thread, .thread .message {
+		margin-left: 60px;
+	}
+
+	.line-through {
+		text-decoration: line-through;
+	}
+}
+
+/* ---------- Extras ---------- */
+
+.private-messaging-portlet .controls {
+	@include border-radius(4px);
+}
+
+.ie7 .private-messaging-portlet {
+	.message-to {
+		position: relative;
+		z-index: 1;
+	}
+}

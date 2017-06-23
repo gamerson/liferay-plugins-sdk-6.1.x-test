@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!DOCTYPE project>
+
+<project name="localization-zh-hook" basedir="." default="deploy">
+	<property name="import.shared" value="localization-shared" />
+
+	<import file="../build-common-hook.xml" />
+
+	<target name="update-from-portal">
+		<copy overwrite="true" preservelastmodified="true" todir="docroot/META-INF/custom_jsps">
+			<fileset
+				dir="${app.server.portal.dir}"
+				includes="html/portal/setup_wizard.jsp"
+			/>
+			<fileset
+				dir="${app.server.portal.dir}"
+				includes="html/portal/update_reminder_query.jsp"
+			/>
+			<fileset
+				dir="${app.server.portal.dir}"
+				includes="html/portlet/directory/user_search.jsp"
+			/>
+			<fileset
+				dir="${app.server.portal.dir}"
+				includes="html/portlet/directory/user/addresses.jsp"
+			/>
+			<fileset
+				dir="${app.server.portal.dir}"
+				includes="html/portlet/directory/user/search_columns.jspf"
+			/>
+			<fileset
+				dir="${app.server.portal.dir}"
+				includes="html/portlet/login/create_account.jsp"
+			/>
+			<fileset
+				dir="${app.server.portal.dir}"
+				includes="html/portlet/portal_settings/authentication.jsp"
+			/>
+			<fileset
+				dir="${app.server.portal.dir}"
+				includes="html/portlet/portal_settings/edit_ldap_server.jsp"
+			/>
+			<fileset
+				dir="${app.server.portal.dir}"
+				includes="html/portlet/portal_settings/test_ldap_users.jsp"
+			/>
+			<fileset
+				dir="${app.server.portal.dir}"
+				includes="html/portlet/shopping/checkout_first.jsp"
+			/>
+			<fileset
+				dir="${app.server.portal.dir}"
+				includes="html/portlet/shopping/checkout_second.jsp"
+			/>
+			<fileset
+				dir="${app.server.portal.dir}"
+				includes="html/portlet/shopping/edit_order.jsp"
+			/>
+			<fileset
+				dir="${app.server.portal.dir}"
+				includes="html/portlet/shopping/order_search.jsp"
+			/>
+			<fileset
+				dir="${app.server.portal.dir}"
+				includes="html/portlet/users_admin/user_search.jsp"
+			/>
+			<fileset
+				dir="${app.server.portal.dir}"
+				includes="html/portlet/users_admin/common/addresses.jsp"
+			/>
+			<fileset
+				dir="${app.server.portal.dir}"
+				includes="html/portlet/users_admin/user/details.jsp"
+			/>
+			<fileset
+				dir="${app.server.portal.dir}"
+				includes="html/portlet/users_admin/user/password.jsp"
+			/>
+			<fileset
+				dir="${app.server.portal.dir}"
+				includes="html/portlet/users_admin/user/password_reminder_query_questions.jspf"
+			/>
+			<fileset
+				dir="${app.server.portal.dir}"
+				includes="html/portlet/users_admin/user/search_columns.jspf"
+			/>
+		</copy>
+	</target>
+</project>
